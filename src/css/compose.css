@@ -1,0 +1,131 @@
+.compose{
+    width:500px;
+    height: 500px;
+    
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    min-width: 500px;
+    border-radius: 10px;
+    overflow:hidden;
+    box-shadow: 0px 0px 8px rgb(51, 51, 51);
+
+}
+
+.compose .compose_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    align-items: center;
+    padding: 7px 15px;
+
+} 
+.compose .compose_header span{
+    font-size: 14px;
+
+}
+
+.compose .compose_header .compose_header_right{
+    display: flex;
+    align-items: center;
+}
+
+.compose .compose_header .compose_header_right :hover{
+    font-weight:bold ;
+    color: red;
+}
+
+.compose .compose_header .compose_header_left{
+    display: flex;
+    align-items: center;
+
+}
+
+.compose .compose_header .compose_header_left svg{
+    font-size: 18px;
+    margin-left: 10px;
+    transition: 0.2s linear 0s;
+    padding:3px;
+    
+}
+
+
+.compose_body{
+    display: flex;
+}
+.compose_bodyform{
+    display: flex;
+    flex-direction: column;
+}
+.compose_bodyform input{
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+    outline: 0;
+    height: 40px;
+    border:0px;
+    box-shadow: inset 0 -1px 0 0 rgb(100 121 143/121);
+
+}
+.compose_bodyform textarea{
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+    outline: 0;
+    border:0px;
+    box-shadow: inset 0 -1px 0 0 rgb(100 121 143/121);
+
+}
+.compose .compose_footer{
+
+    position: absolute;
+    bottom: 4px;
+    border-top: 2px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+    justify-content: space-between;
+
+}
+
+.compose .compose_footer button{
+    background-color: blue;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin: 4px;
+    padding: 10px;
+    height: 34px;
+}
+.compose .compose_footer button svg{
+    border-left: 2px solid rgb(255, 255, 255);
+    margin-left: 15px;
+    padding: 6px 2px 6px 2px;
+}
+
+.compose .compose_footer_right svg{
+   font-size: 20px;
+   margin-left: 10px;
+   border-radius: 3px;
+   color: gray;
+   padding: 3px;
+   transition: 0.2 linear 0s;
+
+}
+
+.compose .compose_footer_right svg:hover{
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+    background-color: #eee;
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    transition: 0.2 linear 0s;
+    cursor: pointer;
+    
+ }

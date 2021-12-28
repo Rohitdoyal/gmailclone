@@ -1,57 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+
+import React, { useEffect } from 'react';
+import Emaillist from './components/Emaillist';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Compose from './components/Compose';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectmail  } from './features/mailSlice';
+import Emaildetail from './components/Emaildetail';
+import {
+  BrowserRouter as Router,
+  Routes ,
+  Route
+ 
+} from "react-router-dom";
+import Login from './Login';
+import { selectuser, signin,signout } from './features/userSlice';
+import { auth } from './Firebase';
+
 
 function App() {
+  const ismessageopen =useSelector(selectmail);
+  const user =useSelector(selectuser);
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    auth.onAuthStateChanged((user)=>{
+      if(user){
+        dispatch(signin({
+          displayName:user.displayName,
+          photoURL:user.photoURL,
+          email:user.email
+
+        }))
+      }
+      else{
+        dispatch(signout());
+      }
+    })
+    
+  }, [])
+
+  console.log("our user is === ");
+  console.log(user);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <Router>
+      {
+        user ? (
+          <div className="App">
+      <Header/>
+
+      <div className='app_body'>
+          <Sidebar/>
+          <Routes>
+          <Route exact path="/" element={<Emaillist/>} />
+          <Route path="/mail" element={<Emaildetail/>}/> 
+            
+          
+        </Routes>
+          
+          
+      </div>
+      {ismessageopen &&
+        <Compose/>
+      }
+       
     </div>
+        ):(
+          <Login/>
+        )
+      }
+    
+    
+    </Router>
   );
 }
 

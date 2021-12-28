@@ -1,0 +1,40 @@
+.loginwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    
+
+}
+
+.logoimg img{
+    height:250px;
+    box-shadow: 2px 2px 2px rgb(209, 209, 209);
+    margin: 100px 0 50px 0px;
+
+    
+}
+
+.gmail_button {
+    background-color: blue;
+    color: white;
+    height: 40px;
+    width:250px;
+    border:2px solid rgb(7, 0, 112);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.gmail_button:hover{
+    
+    background-color: white;
+    color: blue;
+    font-weight: bold;
+    box-shadow: 6px 6px 6px rgb(120, 129, 180);
+    
+}

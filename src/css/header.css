@@ -1,0 +1,47 @@
+.header{
+    display: grid;
+    grid-template-columns: 250px auto 200px;
+    height: 50px;
+    align-items: center;
+   
+    border-bottom: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+}
+
+.header_mid{
+    display: flex;
+    flex: 0.7; 
+}
+
+.searchmail{
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+    display: flex;
+    flex: 0.8;
+   
+}
+
+.searchmail input{
+    border: 0;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: 0;
+    flex:1;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.header_right{
+    display: flex;
+    align-items: center;
+
+}
+.header_right .MuiAvatar-root{
+    height: 35px;
+    width: 35px;
+}
+

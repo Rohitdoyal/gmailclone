@@ -1,0 +1,198 @@
+.emaillist{
+    display: flex;
+    flex-direction: column;
+ 
+
+}
+
+.emaillist_settings{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+
+}
+
+.emaillist_settings svg{
+    font-size: 18px;  
+}
+
+.emaillist_settings .right{
+    display: flex;  
+    align-items: center;
+}
+
+.emaillist_settings .right p{
+    font-size: 13px;
+    
+}
+
+.emailtype{
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid whitesmoke ;
+
+    
+}
+
+.emailtype .emailtype_options{
+    display: flex;
+    align-items: center;
+    min-width: 230px;
+    padding: 0px 10px;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(255, 255, 255);
+   
+
+}
+
+.emailtype_options--active{
+    border-bottom: 3px solid red !important;
+    
+}
+.emailtype_options--active p,
+.emailtype_options--active svg
+{
+font-weight: bold !important;
+    color: red !important;
+}
+.emailtype .emailtype_options svg{
+    color: gray;
+    font-size: 20px;
+    margin-right: 10px;
+
+}
+
+.emailtype .emailtype_options p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    
+}
+
+.emailtype :hover{
+    background-color: whitesmoke;
+}
+
+.emailbody{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    padding: 0px 10px;
+
+}
+.emailbody:hover{
+    box-shadow: 2px 2px 2px rgb(194, 194, 194);
+    border-radius: 50px;
+    cursor: pointer;
+   
+}
+
+.emailbody .emailbody_left{
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    flex: 20%;
+
+}
+
+.emailbody .emailbody_left svg{
+    font-size: 18px;
+    color: gray;
+    margin-right: 10px;
+}
+
+.emailbody .emailbody_left p{
+    font-size: 14px;
+    
+}
+.emailbody .emailbody_mid{
+    display: flex;
+    align-items: center;
+ 
+    flex: 70%;
+    
+}
+.emailbody .emailbody_mid p{
+    font-size: 14px;
+    white-space: nowrap;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.emailbody .emailbody_right{
+    display: flex;
+    align-items: center;
+ 
+    flex: 10%;
+    
+}
+.emailbody .emailbody_right p{
+    font-size: 13px;
+}
+.emaildetailmsg{
+    box-shadow: 2px 2px 2px rgb(182, 182, 182);
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    height: 100%;
+}
+
+.emaildetailheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid whitesmoke;
+    padding: 0px 15px;
+}
+
+.emaildetailheader_left{
+    display: flex;
+    align-items: center;
+}
+.emaildetailheader svg{
+    font-size: 18px;
+}
+
+.emaildetailmidheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    border-bottom: 2px solid whitesmoke;
+
+}
+
+.emaildetailmidheader_left{
+    display: flex;
+    align-items: center;
+
+}
+
+.emaildetailmidheader_right{
+    display: flex;
+    align-items: center;
+    
+}
+
+.emaildetailmidheader svg{
+    font-size: 18px;
+
+}
+
+.emaildetailmidheader_left h4,p{
+    margin-left: 10px;
+
+}
+.emaildetailmidheader_left p{
+    font-size: 12px;
+
+}
+.emaildetailmidheader_right p{
+    font-size: 12px;
+
+}
+
+.emaildetail_body{
+    display: flex;
+    padding: 0px 15px;
+}
